@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <main>
+        <!--Trainers-->
+        <section class="trainers-container">
+            <table class="styled-table">
+                {% for trainer in trainers %}<tr>
+                    <tr>
+                        <td>{{ trainer.name }}</td>
+                        <td>{{ trainer.birthdate }}</td>
+                        <td>{{ trainer.location }}</td>
+                        <td>{{ trainer.email }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </section>
+    </main>
+{% endblock content %}
